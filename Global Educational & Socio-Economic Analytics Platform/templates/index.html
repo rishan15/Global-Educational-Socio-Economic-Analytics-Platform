@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Global Education Dashboard</h1>
+    
+    <div class="chart-container">
+        <h2>Out-of-School Rates</h2>
+        {{ oosr_graph|safe }}
+    </div>
+    
+    <div class="chart-container">
+        <h2>Youth Literacy Rates (15-24)</h2>
+        {{ literacy_graph|safe }}
+    </div>
+    
+    <div class="chart-container">
+        <h2>Completion Rates by Country</h2>
+        {{ completion_graph|safe }}
+    </div>
+    
+    <div class="chart-container">
+        <h2>Enrollment Rates</h2>
+        {{ enrollment_graph|safe }}
+    </div>
+    
+    <div class="chart-container">
+        <h2>Birth Rate vs. Education Enrollment</h2>
+        {{ birth_graph|safe }}
+    </div>
+</body>
+</html>
